@@ -12,7 +12,7 @@ st.altair_chart(chart)
 
 st.header('Interactive Chart')
 st.subheader('Line Chart')
-df = pd.read_csv("I:\Streamlit\lang_data.csv")
+df = pd.read_csv("lang_data.csv")
 lang_list = df.columns.tolist()
 lang_choices = st.multiselect('Choose your Language', lang_list)
 new_df = df[lang_choices]
@@ -24,7 +24,7 @@ st.area_chart(new_df)
 
 st.header('Data Visulization with plotly')
 st.subheader('Display the dataset')
-df = pd.read_csv("I:/Streamlit/tips.csv")
+df = pd.read_csv("tips.csv")
 st.dataframe(df.head())
 
 st.subheader('Pie Chart')
@@ -44,3 +44,4 @@ hist_data = [x1,x2,x3]
 group_labels = ['Group - 1', 'Group - 2', 'Group - 3']
 fig = ff.create_distplot(hist_data, group_labels, bin_size = [.1,.2,5])
 st.plotly_chart(fig)
+
